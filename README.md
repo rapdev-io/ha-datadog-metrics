@@ -57,7 +57,7 @@ This integration simply writes your metrics in `dogstatsd` format over UDP (defa
 
 The integration provides the following actions.
 
-### Action: Get schedule
+### Action: Datadog Metrics
 
 The `rapdev.datadog_metrics` service is used to push metrics into datadog.
 
