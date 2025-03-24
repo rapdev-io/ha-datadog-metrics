@@ -1,1 +1,1 @@
-"""Package __init__"""
+"""Package __init__."""
