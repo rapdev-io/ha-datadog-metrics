@@ -1,5 +1,7 @@
 # Send your Home Assistant metrics to Datadog
 
+[![Tests](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/test.yml/badge.svg)](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/test.yml) [![HACS Validate](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/validate.yml/badge.svg)](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/validate.yml)
+
 This component exposes a Home Assistant [Service](https://developers.home-assistant.io/docs/dev_101_services) that can be used as a custom [Action Target](https://www.home-assistant.io/docs/automation/action/).
 
 Common usage is to set up an Entity-based `state_changed` automation:
