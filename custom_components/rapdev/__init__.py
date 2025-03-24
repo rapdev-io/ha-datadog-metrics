@@ -81,7 +81,9 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
             {
                 vol.Required("metric"): cv.string,
                 vol.Required("value"): vol.Schema(vol.Coerce(float)),
-                vol.Optional("tags"): vol.Optional(vol.Schema(dict[str, str])),
+                vol.Optional("tags"): vol.Optional(
+                    vol.Schema(vol.Any(dict[str, str], list[str]))
+                ),
             }
         ),
     )
