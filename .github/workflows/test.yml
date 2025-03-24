@@ -6,6 +6,10 @@ jobs:
   pytest:
     name: "Pytest"
     runs-on: ubuntu/latest
+    strategy:
+      matrix:
+        python-version: ["3.13"]
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
