@@ -34,7 +34,7 @@ jobs:
       - name: Test and Build coverage file
         run: |
           pip install pytest-cov
-          pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=app tests/ | tee pytest-coverage.txt
+          pytest tests/ --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=custom_components | tee pytest-coverage.txt
 
       - name: Pytest coverage comment
         uses: MishaKav/pytest-coverage-comment@main
