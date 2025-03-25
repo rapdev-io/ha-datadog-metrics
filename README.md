@@ -53,7 +53,7 @@ This integration will **not** auto-magically write any metrics to datadog for yo
 
 ## Important: Datadog Agent required
 
-This integration simply writes your metrics in `dogstatsd` format over UDP (default `localhost:8125`). You probably want to install the [Datadog add-on](TODO) that stands up the collector to receive these metrics.
+This integration writes your metrics in `statsd` format over UDP (default `localhost:8125`). You probably want to install the [Datadog add-on](https://github.com/rapdev-io/addon-datadog-agent) that provides the collector to receive these metrics.
 
 ## Actions
 
