@@ -17,6 +17,8 @@ ignore = [
     "COM812", # incompatible with formatter
     "ISC001", # incompatible with formatter
     "TRY301", # move exceptions to a dedicated function (?) or something awful
+    "TRY003", # too-long exception strings
+    "EM102" # f-string literals in exceptions
 ]
 
 [lint.flake8-pytest-style]
