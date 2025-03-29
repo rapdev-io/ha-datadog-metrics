@@ -7,7 +7,7 @@ from .const import DOMAIN
 from .services import register_services
 
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+async def async_setup(hass: HomeAssistant, config: dict) -> bool:  # noqa: ARG001
     """Set up from YAML is deprecated."""
     return True  # No YAML config here
 

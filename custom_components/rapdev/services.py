@@ -32,7 +32,7 @@ def register_services(hass: HomeAssistant, config: Mapping[str, Any]) -> None:
                 else raw_tags
             )
             for kv_pair in tags:
-                if len(kv_pair.split(":")) != 2:
+                if len(kv_pair.split(":")) != 2:  # noqa: PLR2004
                     raise ValueError(f"improperly formatted tag: {kv_pair}")
 
             metric = f"{prefix}.{call.data['metric']}"
