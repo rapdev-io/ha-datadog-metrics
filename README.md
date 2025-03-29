@@ -18,9 +18,23 @@ This component exposes a Home Assistant [Service](https://developers.home-assist
 * Settings > Devices & services > Add Integration > add "Datadog Metrics"
 * Customize any settings, if desired, then `Submit`
 
+## What about HA's [built-in Datadog integration](https://www.home-assistant.io/integrations/datadog/)?
+
+Both this component and the built-in integration are used to send custom metrics to datadog. However, the built-in integration was **last updated 8 years ago**, when the HA platform was considerably different.
+
+The built-in integration provides:
+* No control over which metrics to send. It sends everything, even internal HA events. This is a LOT of metrics:
+  * Every state change event
+  * Every _numeric attribute_ on every state change event too
+* No control over tags: you only get the `entity_id`
+* 100% of logbook entries are also sent as custom events
+* Only `state_changed` events are listened to
+
+This component gives you the power to pick and choose what you want to send to datadog, and format it / tag it the way you want. Anywhere you can use an Action, you can use this.
+
 ## Usage
 
-Common usage is to set up an Entity-based `state_changed` automation:
+The most common usage is to set up an Entity-based `state_changed` automation:
 
 ```yaml
 - id: '987654321'
@@ -43,7 +57,7 @@ Common usage is to set up an Entity-based `state_changed` automation:
   max: 10
 ```
 
-This gives you maximum flexibility to write what you want, how you want.  You can easily push attributes as metrics, e.g. you could push `sun` component metrics with:
+This pushes sensor state changes as metrics. You can just as easily push attributes as metrics, e.g. you could push `sun` component metrics with:
 
 ```yaml
 - id: '123456789'
@@ -63,7 +77,7 @@ This gives you maximum flexibility to write what you want, how you want.  You ca
       value: '{{ trigger.to_state.attributes.elevation }}'
 ```
 
-You can use the Automation UI to help build the majority of this if you don't like slinging YAML :grin:. You will still want to familiarize yourself with [Automation Templating](https://www.home-assistant.io/docs/automation/templating/) in order to write the `data:` entry for each action.
+You can use the Automation UI to help build the majority of this if you don't like slinging YAML :grin:. You will still want to familiarize yourself with [Automation Templating](https://www.home-assistant.io/docs/automation/templating/) in order to write the `data:` entry for each action. Use `developer tools > states` if you're not sure about what `to_state` looks like for a given entity.
 
 This integration will **not** auto-magically write any metrics to datadog for you; the `metric`s and `value`s (and optional `tags`) must be specified explicitly in automation actions (or equivalent).
 
