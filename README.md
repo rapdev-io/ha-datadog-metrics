@@ -20,7 +20,7 @@ This component exposes a Home Assistant [Service](https://developers.home-assist
 
 ## What about HA's [built-in Datadog integration](https://www.home-assistant.io/integrations/datadog/)?
 
-Both this component and the built-in integration are used to send custom metrics to datadog. However, the built-in integration was **last updated 8 years ago**, when the HA platform was considerably different.
+Both this component and the built-in integration are used to send custom metrics to datadog. However, the built-in integration was **last updated in 2017**, when the HA platform was considerably different.
 
 The built-in integration provides:
 * No control over which metrics to send. It sends everything, even internal HA events. This is a LOT of metrics:
