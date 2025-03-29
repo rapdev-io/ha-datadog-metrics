@@ -2,7 +2,7 @@
     "services": {
         "datadog_metric": {
             "name": "Datadog Metrics",
-            "description": "Send a metric to datadog (via dogstatsd)",
+            "description": "Send a metric to Datadog (via DogStatsD)",
             "fields": {
                 "metric": {
                     "name": "metric",
@@ -17,6 +17,26 @@
                     "description": "Optional map of strings to apply to the metric as tags."
                 }
             }
+        }
+    },
+    "config": {
+        "step": {
+            "user": {
+                "title": "Configure Datadog (DogStatsD)",
+                "description": "Set up the host and port for your DogStatsD agent."
+            }
+        },
+        "host": {
+            "name": "Host",
+            "description": "Hostname or IP address of the DogStatsD agent. Leave as localhost if running the add-on agent."
+        },
+        "port": {
+            "name": "Port",
+            "description": "Port number where the DogStatsD agent is listening."
+        },
+        "prefix": {
+            "name": "Metric Prefix",
+            "description": "Prefix applied to all metric names (e.g., 'hass')."
         }
     }
 }
