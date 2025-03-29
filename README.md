@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/test.yml/badge.svg)](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/test.yml) [![HACS Validate](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/validate.yml/badge.svg)](https://github.com/rapdev-io/ha-datadog-metrics/actions/workflows/validate.yml) 
 
-<img src="https://brands.home-assistant.io/rapdev/icon.png" align="left" height="48" width="48" > <img src="https://brands.home-assistant.io/datadog/icon.png" align="left" height="48" width="48" >
+<a href="https://www.rapdev.io"><img alt="by rapdev.io" src="https://brands.home-assistant.io/rapdev/icon.png" align="left" height="48" width="48" ></a> <img alt="for Datadog" src="https://brands.home-assistant.io/datadog/icon.png" align="left" height="48" width="48" >
 
 This component exposes a Home Assistant [Service](https://developers.home-assistant.io/docs/dev_101_services) that can be used as a custom [Action Target](https://www.home-assistant.io/docs/automation/action/) to send any metrics from Homeassistant to Datadog.
 
