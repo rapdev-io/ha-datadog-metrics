@@ -29,7 +29,12 @@ class DatadogConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=vol.Schema(
                 {
-                    vol.Required("host", default=DEFAULT_HOST): str,
+                    vol.Required(
+                        "host",
+                        default=DEFAULT_HOST,
+                        msg="host message",
+                        description="host description",
+                    ): str,
                     vol.Required("port", default=DEFAULT_PORT): int,
                     vol.Required("prefix", default=DEFAULT_PREFIX): str,
                 }

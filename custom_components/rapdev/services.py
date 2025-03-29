@@ -52,7 +52,9 @@ def register_services(hass: HomeAssistant, config: Mapping[str, Any]) -> None:
         datadog_metric,
         vol.Schema(
             {
-                vol.Required("metric"): cv.string,
+                vol.Required(
+                    "metric", msg="metric is required", description="metric description"
+                ): cv.string,
                 vol.Required("value"): vol.Coerce(float),
                 vol.Optional("tags"): vol.Any({str: str}, [str]),
             }
