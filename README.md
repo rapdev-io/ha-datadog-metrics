@@ -77,7 +77,7 @@ This pushes sensor state changes as metrics. You can just as easily push attribu
       value: '{{ trigger.to_state.attributes.elevation }}'
 ```
 
-You can use the Automation UI to help build the majority of this if you don't like slinging YAML :grin:. You will still want to familiarize yourself with [Automation Templating](https://www.home-assistant.io/docs/automation/templating/) in order to write the `data:` entry for each action. Use `developer tools > states` if you're not sure about what `to_state` looks like for a given entity.
+You can use the Automation UI to help build the majority of this if you don't like slinging YAML :grin:. You will still want to familiarize yourself with [Automation Templating](https://www.home-assistant.io/docs/automation/templating/) in order to write the `data:` entry for each action. Use `Developer tools > states` if you're not sure about what `to_state` looks like for a given entity.
 
 This integration will **not** auto-magically write any metrics to datadog for you; the `metric`s and `value`s (and optional `tags`) must be specified explicitly in automation actions (or equivalent).
 
