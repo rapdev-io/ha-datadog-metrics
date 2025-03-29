@@ -10,7 +10,7 @@ This component exposes a Home Assistant [Service](https://developers.home-assist
 
 * [prereq] Have [HACS installed](https://www.hacs.xyz/docs/use/download/download/)
 * Install via HACS:
-  * HACS > ... in top right corner > Custom Repositories, add:
+  * HACS > `...` in top right corner > Custom Repositories, add this repo:
   ```
   https://github.com/rapdev-io/ha-datadog-metrics/
   ```
