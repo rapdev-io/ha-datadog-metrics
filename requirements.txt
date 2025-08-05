@@ -2,6 +2,6 @@ colorlog==6.9.0
 homeassistant==2025.3.4
 pip>=21.3.1
 ruff==0.12.5
-datadog==0.52.0
+datadog==0.52.1
 pytest==8.4.1
 pytest-asyncio==1.1.0
